@@ -1,0 +1,335 @@
+﻿body {
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+}
+
+SimpleButton {
+    border: 1px solid #969c9c;
+}
+
+    SimpleButton:focus {
+        border: 1px solid #969c9c;
+    }
+
+
+.TextBoxStyle {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    min-height: 25px;
+}
+
+    .TextBoxStyle:focus {
+        border: 1px solid #158d84;
+        border-radius: 2px;
+        padding-left: 6px;
+        padding-right: 6px;
+        min-height: 25px;
+    }
+    .TextBoxStyle:focus-visible {
+        border: 1px solid #158d84;
+        border-radius: 2px;
+        padding-left: 6px;
+        padding-right: 6px;
+        min-height: 25px;
+    }
+
+    .DropDownListStyle {
+        width: 100%;
+        border: 1px solid #d5d5d5;
+        border-radius: 2px;
+        padding-left: 2px;
+        padding-right: 6px;
+        height: 25px;
+    }
+
+    .DropDownListStyle:focus {
+        border: 1px solid #158d84;
+        border-radius: 2px;
+        padding-left: 2px;
+        padding-right: 6px;
+        height: 25px;
+    }
+
+a.list-group-item .list-group-item-heading {
+    color: #242b2e;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+a.list-group-item .list-group-item-text {
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-size: 11px;
+    color: #78858a;
+}
+
+table th, table td {
+    /*white-space: nowrap;*/
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table th { /*background-color: #190ea9;*/
+    background: #91b4b0; /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(#19904b, #115849); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(#19904b, #115849); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#19904b, #115849); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#19904b, #115849); /* Standard syntax */
+    /*background-image: linear-gradient(to top, rgba(100,100,100,0.2) 0%, rgba(255,255,255,0.2) 100%)*/;
+}
+
+.overflowContainer TABLE {
+    background-image: linear-gradient(to right, rgba(180,180,180,0.2) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+.updatePanel {
+    border: 2px dashed #999;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.autoCompleteList {
+    height: 220px;
+    width: 550px;
+    overflow: auto;
+    border: solid 2px #555;
+    background-color: white;
+    color: black;
+    padding-left: -15px;
+    background-color: #b4fafa;
+}
+
+.autoCompleteListItem {
+    height: 27px;
+    width: 550px;
+    background-color: #b4fafa;
+    overflow-y: auto;
+    border-bottom: dotted 1px grey;
+    padding-left: 8px;
+}
+
+.autoCompleteListItemHighlight {
+    width: 550px;
+    background-color: #3399dc;
+    padding-left: 8px;
+}
+
+.DashBoard table th {
+    background-color: #e6e6e6;
+}
+
+tr.GridPager td {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    /*border: 0;*/
+}
+
+.GridPager {
+    background-color: #e9ecee;
+    height: 30px;
+    border-top: 1px solid #8d8d8d;
+}
+
+    .GridPager a, .GridPager span {
+        display: block;
+        width: 20px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        font-size: 80%;
+    }
+
+    .GridPager a {
+        background-color: #f5f5f5;
+        color: #969696;
+        border: 1px solid #dddddd;
+        height: 20px;
+        font-size: 80%;
+    }
+
+    .GridPager span {
+        background-color: #ccdef4;
+        color: #000;
+        border: 1px solid #969696;
+        height: 20px;
+    }
+
+.NewGridDesign {
+    background: #007991; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #007991, #78ffd6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #007991, #78ffd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Verdana;
+    font-size: 12px;
+    color: white;
+    font-weight: normal;
+    padding: 3px;
+    text-wrap: normal;
+    word-wrap: break-word;
+    /*-moz-border-radius-topleft: 15px;*/
+    /*border-top-left-radius:6px;
+           border-top-right-radius:6px;*/
+}
+
+.NewGridDesingBody {
+    /*border: 1px solid #007991;*/
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+    .NewGridDesingBody th {
+        border: 1px solid #c9cfde;
+        word-wrap: break-word;
+    }
+
+    .NewGridDesingBody td {
+        border: 1px solid #DCE3E8;
+        word-wrap: break-word;
+    }
+
+.modalBackground2 {
+    background-color: lightgrey;
+    filter: alpha(opacity=60);
+    opacity: 0.87;
+}
+
+.modalPopup {
+    width: 1000px;
+}
+
+    .modalPopup .header {
+        background-color: #21A788;
+        height: 30px;
+        color: White;
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        vertical-align: middle;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .modalPopup .body {
+        max-height: 90%;
+        max-width: 1000px;
+        background-color: #ECEFF4;
+        color: Black;
+        overflow-y: scroll;
+    }
+
+    .modalPopup .footer {
+        height: 35px;
+        background-color: #21A788;
+        text-align: center;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+.HideGridColumn {
+    display: none;
+}
+
+.GridColoumRight {
+    text-align: right;
+    padding-right: 3px;
+}
+
+.GridColoumCenter {
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.GridColoumLeft {
+    text-align: left;
+    padding-left: 3px;
+}
+
+.AlterColoum {
+    background-color: #D9F9FF;
+}
+
+.CalenderTheme .ajax__calendar_container {
+    background-color: #ffffff;
+    border: solid 1px #77D5F7;
+    width: 180px;
+}
+
+.CalenderTheme .ajax__calendar_header {
+    background-color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.CalenderTheme .ajax__calendar_body {
+    background-color: #ffffff;
+    border-top: solid 1px #77D5F7;
+    border-bottom: solid 1px #77D5F7;
+    width: 178px;
+    margin: -4px;
+}
+
+.CalenderTheme .ajax__calendar_dayname {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
+.CalenderTheme .ajax__calendar_day {
+    text-align: center;
+}
+
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_day,
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_month,
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_year,
+.CalenderTheme .ajax__calendar_active {
+    font-weight: bold;
+    background-color: #DEF1F4;
+}
+
+.CalenderTheme .ajax__calendar_days, .ajax__calendar_months, .ajax__calendar_years {
+    top: 0px;
+    left: 0px;
+    height: 140px;
+    width: 180px;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+}
+
+.CalenderTheme .ajax__calendar_container TABLE {
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    width: 160px;
+}
+
+.CalenderTheme .ajax__calendar_today {
+    font-weight: bold;
+    color: green;
+}
+
+.CalenderTheme .ajax__calendar_other,
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_today,
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_title {
+    color: #bbbbbb;
+}
+
+.CalenderTheme .ajax__calendar_footer {
+    height: 22px;
+}
+
+.CalenderTheme .ajax__calendar_hover .ajax__calendar_day, .CalenderTheme .ajax__calendar_hover .ajax__calendar_month, .CalenderTheme .ajax__calendar_hover .ajax__calendar_year, .CalenderTheme .ajax__calendar_active {
+    font-weight: bold;
+    background-color: #00FF30;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvoiceReference" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceDate" type="xs:string" minOccurs="0" />
+              <xs:element name="FromOdometer" type="xs:long" minOccurs="0" />
+              <xs:element name="ToOdometer" type="xs:long" minOccurs="0" />
+              <xs:element name="TotalBill" type="xs:double" minOccurs="0" />
+              <xs:element name="VatAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="DisAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="NetBill" type="xs:double" minOccurs="0" />
+              <xs:element name="LicencePlate" type="xs:string" minOccurs="0" />
+              <xs:element name="EngineNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BrandName" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelName" type="xs:string" minOccurs="0" />
+              <xs:element name="ReqCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ReqDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="Address" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceTask" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="InvQty" type="xs:double" minOccurs="0" />
+              <xs:element name="VatAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Parts_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="InvQty" type="xs:double" minOccurs="0" />
+              <xs:element name="VatAmt" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalAmt" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

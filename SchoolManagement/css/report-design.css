@@ -1,0 +1,112 @@
+﻿body {
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+}
+
+table th, table td {
+    white-space: nowrap;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+table th {
+    background: #eaeaea;
+}
+
+.DashBoard table th {
+    background-color: #e6e6e6;
+}
+
+tr.GridPager td {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.GridPager {
+    background-color: #e9ecee;
+    height: 30px;
+    border-top: 1px solid #8d8d8d;
+}
+
+    .GridPager a, .GridPager span {
+        display: block;
+        width: 20px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        font-size: 80%;
+    }
+
+    .GridPager a {
+        background-color: #f5f5f5;
+        color: #969696;
+        border: 1px solid #dddddd;
+        height: 20px;
+        font-size: 80%;
+    }
+
+    .GridPager span {
+        background-color: #ccdef4;
+        color: #000;
+        border: 1px solid #969696;
+        height: 20px;
+    }
+
+.NewGridDesign {
+    background: #007991;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #4a4949;
+    font-weight: normal;
+    padding: 3px;
+    text-wrap: normal;
+    word-wrap: break-word;
+    /*-moz-border-radius-topleft: 15px;*/
+    /*border-top-left-radius:6px;
+           border-top-right-radius:6px;*/
+}
+
+.NewGridDesignBody {
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+
+    .NewGridDesignBody th {
+        border: 1px solid #c9cfde;
+        word-wrap: break-word;
+    }
+
+    .NewGridDesignBody td {
+        border: 1px solid #DCE3E8;
+        word-wrap: break-word;
+    }
+
+.HideGridColumn {
+    display: none;
+}
+
+.GridColoumRight {
+    text-align: right;
+    padding-right: 3px;
+}
+
+.GridColoumCenter {
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.GridColoumLeft {
+    text-align: left;
+    padding-left: 3px;
+}
+
+.AlterColoum {
+    background-color: #D9F9FF;
+}
+
+

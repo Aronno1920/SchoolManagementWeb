@@ -1,0 +1,127 @@
+﻿<%@ Master AutoEventWireup="true" CodeBehind="MasterPageViewList.Master.cs" Inherits="SchoolManagement.MasterPageViewList" Language="C#" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable = no" />
+    <meta name="keywords" content="techaid24,schoolmanagement" />
+    <meta name="description" content="School Management System - Developed by TechAid24 Team" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/materialadmin/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialadmin/materialadmin.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialadmin/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialadmin/material-design-iconic-font.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom-design.css" />
+    <link type="text/css" rel="stylesheet" href="css/navigation.css" />
+
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="HeaderPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="menubar-hoverable header-fixed menubar-pin menubar-visible">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+        <header id="header">
+            <div class="headerbar">
+                <div class="headerbar-left">
+                    <ul class="header-nav header-nav-options">
+                        <li class="header-nav-brand">
+                            <div class="brand-holder">
+                                <span class="text-lg text-bold text-primary">
+                                    <asp:Label ID="lblApplicationName" runat="server" Text="SMS"></asp:Label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="text-lg text-bold text-primary" style="text-align: center;">
+                                <asp:Label ID="lblSchoolName" runat="server"></asp:Label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headerbar-right">
+                    <ul class="header-nav header-nav-options">
+                        <li class="dropdown hidden-xs">
+                            <a href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown">
+                                <i class="fa fa fa-bell-o" style="font-size: 30px"></i><sup class="badge style-warning">
+                                    <asp:Label runat="server" ID="lblRemainderCount" Text="0" /></sup>
+                            </a>
+                            <ul class="dropdown-menu animation-expand">
+                                <li><a href="Remainder.aspx">View My Remainder</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="header-nav header-nav-profile">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+                                <asp:Image runat="server" ID="imgProfilePhoto" />
+                                <span class="profile-info">
+                                    <asp:Label ID="lblLogedUser" runat="server" Text="Hi! User"></asp:Label>
+                                    <small>
+                                        <asp:Label ID="lblUserType" runat="server" Text="User Level"></asp:Label>
+                                    </small>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animation-dock">
+                                <li><a href="MyProfile.aspx">My Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="Theme.aspx">Change Theme</a></li>
+                                <li class="divider"></li>
+                                <li><a href="ProcessFlow.aspx">Process Flow</a></li>
+                                <li class="divider"></li>
+                                <li class="logout_button_bg"><i class="fa fa-fw fa-power-off text-danger"></i>
+                                    <asp:Button runat="server" ID="btnLogout" Text="Logout" Width="80%"  OnClick="btnLogout_Click" class="logout_button" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <%--START - Top Navigation--%>
+
+            <nav>
+                <div runat="server" id="topMenu" style="padding-bottom: 45px;">
+                </div>
+            </nav>
+
+            <%--END - Top Navigation--%>
+        </header>
+
+        <div id="content">
+            <section>
+                <div class="section-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <asp:ContentPlaceHolder ID="SearchPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="col-sm-9">
+                            <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </form>
+
+    <script src="js/modules/materialadmin/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/modules/materialadmin/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/modules/materialadmin/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+    <script src="js/modules/materialadmin/core/cache/43ef607ee92d94826432d1d6f09372e1.js"></script>
+    <script src="js/modules/materialadmin/core/cache/63d0445130d69b2868a8d28c93309746.js"></script>
+    <script src="js/modules/materialadmin/core/cache/ec2c8835c9f9fbb7b8cd36464b491e73.js"></script>
+</body>
+</html>

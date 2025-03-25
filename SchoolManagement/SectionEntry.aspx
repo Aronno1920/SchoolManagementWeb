@@ -1,0 +1,121 @@
+﻿<%@ Page Title="Section Information | SMS" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="SectionEntry.aspx.cs" Inherits="SchoolManagement.SectionEntry" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeaderPlaceHolder" runat="server">
+    <script type="text/javascript">
+        function savevalidate() {
+            if (document.getElementById("<%=ddlClassName.ClientID%>").value == "0") {
+                alert('Please Select Class Name');
+                document.getElementById("<%=ddlClassName.ClientID%>").focus();
+                return false;
+            }
+            if (document.getElementById("<%=txtSectionName.ClientID%>").value == "") {
+                alert("Please Enter Section Name");
+                document.getElementById("<%=txtSectionName.ClientID%>").focus();
+                return false;
+            }
+        }
+    </script>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
+    <asp:UpdatePanel runat="server" ID="updatePanel">
+        <ContentTemplate>
+            <div class="col-sm-12">
+                <div class="col-lg-6">
+                    <div runat="server" id="divEntry">
+                        <div class="card-head">
+                            <header><i style="padding-left: 3px; padding-right: 6px" class="fa fa-plus-circle"></i>Class Section Entry</header>
+                        </div>
+                        <div class="card-body style-default-bright">
+                            <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    Class Name
+                                    <span style="color: red">*</span>
+                                </div>
+                                <div class="col-sm-9">
+                                    <asp:DropDownList ID="ddlClassName" runat="server" CssClass="DropDownListStyle"></asp:DropDownList>
+                                    <asp:HiddenField runat="server" ID="hdSectionId" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    Section Name
+                                </div>
+                                <div class="col-sm-9">
+                                    <asp:TextBox ID="txtSectionName" runat="server" CssClass="TextBoxStyle"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    Section Name (BN)
+                                </div>
+                                <div class="col-sm-9">
+                                    <asp:TextBox ID="txtSectionNameBangla" runat="server" CssClass="TextBoxStyle"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    Section Alias
+                                </div>
+                                <div class="col-sm-9">
+                                    <asp:TextBox ID="txtSectionNameAlias" runat="server" CssClass="TextBoxStyle"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-sm-12" style="padding-top:10px; text-align: center;">
+                                <asp:Button runat="server" ID="btnSave" class="btn btn-raised btn-primary" Text="Save" OnClick="btnSave_Click" OnClientClick="return savevalidate();" />
+                                <asp:Button runat="server" ID="btnUpdate" class="btn btn-raised btn-warning" Text="Update" OnClick="btnUpdate_Click" OnClientClick="return savevalidate();" />
+                                <asp:Button runat="server" ID="btnClear" class="btn btn-raised btn-default-dark" Text="Clear" OnClick="btnClear_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div runat="server" id="divDetails">
+                        <div class="card-head">
+                            <header><i style="padding-left: 3px; padding-right: 6px" class="fa fa-book"></i>Class Section Details (<asp:Label runat="server" ID="lblRecordCount">0</asp:Label>)</header>
+                        </div>
+                        <div class="card-body style-default-bright">
+                            <div class="col-sm-12" style="margin-bottom: 10px">
+                                <div class="col-sm-4">
+                                    <asp:DropDownList ID="ddlGridSearch" runat="server" CssClass="DropDownListStyle"></asp:DropDownList>
+                                </div>
+                                <div class="col-sm-6">
+                                    <asp:TextBox runat="server" ID="txtGridSearch" CssClass="TextBoxStyle"></asp:TextBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <asp:Button runat="server" ID="btnGridSearch" OnClick="btnGridSearch_Click" Text="Search" CssClass="btn-raised" />
+                                </div>
+                                <div class="col-sm-1">
+                                    <asp:Button runat="server" ID="btnGridSearchClear" OnClick="btnGridSearchClear_Click" Text="Clear" CssClass="btn-raised" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <asp:GridView ID="gvSection" runat="server" OnRowCommand="gvSection_RowCommand" OnPageIndexChanging="gvSection_OnPageIndexChanging" Width="100%" Class="NewGridDesingBody" AllowPaging="true" PageSize="15" RowStyle-Wrap="false"
+                                    EmptyDataText="No data found for selected criteria." ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+                                    <Columns>
+                                        <asp:BoundField DataField="SectionId" HeaderText="Section ID" ItemStyle-CssClass="HideGridColumn" HeaderStyle-CssClass="HideGridColumn" />
+                                        <asp:BoundField DataField="ClassName" HeaderText="Class Name" />
+                                        <asp:BoundField DataField="SectionName" HeaderText="Section Name" />
+                                        <asp:BoundField DataField="SectionNameBangla" HeaderText="Section Name (BN)" />
+                                        <asp:BoundField DataField="SectionNameAlias" HeaderText="Section Alias" />
+                                        <asp:TemplateField HeaderText="Action">
+                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="30px" Height="20px"></ItemStyle>
+                                            <ItemTemplate>
+                                                <asp:ImageButton runat="server" ID="ibtnEdit" CommandName="EditRow" ToolTip="Click For Edit" ImageUrl="~/img/edit.png" Height="25px" />
+                                                <asp:ImageButton runat="server" ID="ibtnRemove" CommandName="RemoveRow" OnClientClick="return confirm('Are you sure, you want to brand name?');" ToolTip="Click For Delete" ImageUrl="~/img/delete.png" Height="25px" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <AlternatingRowStyle BackColor="#f0fdf9" />
+                                    <PagerSettings PageButtonCount="5" Mode="NumericFirstLast" FirstPageText="First Page" LastPageText="Last Page" />
+                                    <PagerStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                    <HeaderStyle CssClass="NewGridDesign" />
+                                </asp:GridView>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>

@@ -1,0 +1,99 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none !important;
+}
+
+nav {
+    height: 30px;
+    background: #063247;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+    padding-left: 15px;
+}
+
+    nav ul {
+        float: left;
+        margin-right: 30px;
+    }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+            nav ul li a {
+                color: white;
+                display: block;
+                padding: 0 10px;
+                line-height: 30px;
+                font-size: 13px;
+                background: #063247;
+                transition: .5s;
+                border-right: 1px solid #9aa7ac;
+            }
+
+                nav ul li a:hover,
+                nav ul li a.active {
+                    color: #23dbdb;
+                }
+
+        nav ul ul {
+            position: absolute;
+            top: 85px;
+            border-top: 3px solid #23dbdb;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        nav ul li:hover > ul {
+            top: 80px;
+            opacity: 1;
+            visibility: visible;
+            transition: .3s linear;
+        }
+
+        nav ul ul li {
+            width: 150px;
+            display: list-item;
+            position: relative;
+            border: 1px solid #9aa7ac;
+            border-top: none;
+            width: 200px;
+        }
+
+            nav ul ul li a {
+                line-height: 25px;
+            }
+
+        nav ul ul ul {
+            border-top: none;
+        }
+
+            nav ul ul ul li {
+                position: relative;
+                top: -90px;
+                left: 149px;
+            }
+
+        nav ul ul li a i {
+            float: right;
+            margin-top: 6px;
+            margin-right: -5px;
+        }
+
+section {
+    background: url(bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+ul, ol {
+    padding-left: 0px;
+}
+
+.miniMenu {
+    margin-left: 49px;
+    border:0px;
+    margin-top: 10px;
+}
